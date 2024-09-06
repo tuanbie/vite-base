@@ -6,7 +6,9 @@ import AppRoutes from "./routers";
 function App() {
   return (
     <>
-      <AppRoutes />
+      <div className="bg-black text-white  ">
+        <AppRoutes />
+      </div>
     </>
   );
 }

@@ -1,0 +1,5 @@
+.link {
+  margin-left: 1rem; /* Khoảng cách giữa logo và link */
+  text-decoration: none;
+  color: black; /* Màu của liên kết, có thể thay đổi */
+}
