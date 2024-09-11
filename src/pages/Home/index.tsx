@@ -14,6 +14,7 @@ import shoes from "../../assets/images/shoes.png";
 import sunglass from "../../assets/images/sunglass.png";
 import wallet from "../../assets/images/wallet.png";
 import womenbag from "../../assets/images/womanbag.png";
+import womenbagpc from "../../assets/images/womenbagpc.png";
 import camerabox from "../../assets/images/camerabox.png";
 import cargo from "../../assets/images/cargo.png";
 import dark from "../../assets/images/dark.png";
@@ -28,12 +29,12 @@ import personal from "../../assets/images/personal.png";
 
 function Home() {
   return (
-    <div className="relative mt-20">
+    <div className="relative mt-20 ">
       <div className="hidden md:flex">
-        <CustomVideoPlayer src={exampleVideo} />
+        <CustomVideoPlayer src={exampleVideo} autoPlay={true} muted={true} />
       </div>
       <div className="md:hidden">
-        <CustomVideoPlayer src={mobile} />
+        <CustomVideoPlayer src={mobile} autoPlay={true} muted={true} />
       </div>
       <div className="flex justify-center text-center py-24">
         <p className="system-ui font-normal text-2xl px-6">Explore a Selection of the Maison's Creations</p>
@@ -113,8 +114,17 @@ function Home() {
         <p className="Georgia font-normal text-3xl px-6 py-4">Handbags</p>
         <p className="Georgia font-normal text-sm px-6 py-1 underline underline-offset-4">Discover the Selection</p>
       </div>
-      <img src={womenbag} className="top-0 z-10 pb-12  mx-auto"></img>
-      <div>
+
+      <div className="h-screen -z-10 top-20 sticky">
+        <div className="hidden md:flex">
+          <img src={womenbagpc} className="mx-auto w-full"></img>
+        </div>
+        <div className="md:hidden">
+          <img src={womenbag} className="mx-auto w-full"></img>
+        </div>
+      </div>
+
+      <div className="bg-white pt-12">
         <div className="hidden md:grid grid-cols-4 gap-5 percent-padding">
           <div>
             <img src={montsouris}></img>
@@ -153,19 +163,21 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className=" justify-center text-center py-24">
+      <div className=" justify-center text-center py-24 bg-white">
         <p className="Georgia font-normal text-xs px-6 py-1">Perfumers</p>
         <p className="Georgia font-normal text-3xl px-6 py-4">27 Lovers</p>
         <p className="Georgia font-normal text-sm px-6 py-1 underline underline-offset-4">Discover the New Perfume</p>
       </div>
-      <div className="hidden md:flex">
-        <CustomVideoPlayer src={manrun} />
-      </div>
-      <div className="md:hidden">
-        <CustomVideoPlayer src={manrunmobile} />
+      <div className="h-screen -z-10 top-20 sticky">
+        <div className="hidden md:flex">
+          <CustomVideoPlayer src={manrun} autoPlay={true} muted={true} />
+        </div>
+        <div className="md:hidden">
+          <CustomVideoPlayer src={manrunmobile} autoPlay={true} muted={true} />
+        </div>
       </div>
 
-      <div className="pt-12">
+      <div className="pt-12 bg-white">
         <div className="hidden md:grid grid-cols-4 gap-5 percent-padding">
           <div>
             <img src={love}></img>
@@ -205,14 +217,14 @@ function Home() {
         </div>
       </div>
 
-      <div className=" justify-center text-center py-24 ">
+      <div className=" justify-center text-center py-24 bg-white">
         <p className="Georgia font-normal text-3xl px-6 py-4">27 Jan Services</p>
         <p className="Georgia font-normal text-sm px-6 py-1 text-center">
           Louis Vuitton offers complementary wrapping on all orders, carefully packaged in the Maison's iconic boxes.
         </p>
       </div>
 
-      <div className="pb-24">
+      <div className="pb-24 bg-white">
         <div className="hidden md:grid grid-cols-3 gap-3 percent-padding justify-between">
           <div>
             <img src={service}></img>
