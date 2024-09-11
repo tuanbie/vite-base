@@ -1,4 +1,4 @@
-import "./style.scss";
+import "./style.css";
 
 const Dropdown: React.FC<{
   id: string;

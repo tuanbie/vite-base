@@ -49,7 +49,7 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({ src, autoPlay = t
 
   return (
     <div className="relative">
-      <video ref={videoRef} width="100%" height="auto" src={src} controls={false}>
+      <video ref={videoRef} width="100%" className="w-screen" height="auto" src={src} controls={false}>
         Your browser does not support the video tag.
       </video>
       <div className="absolute bottom-0 left-0 right-0 flex justify-between m-8">

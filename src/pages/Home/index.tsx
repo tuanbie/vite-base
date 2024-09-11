@@ -1,6 +1,6 @@
 import CustomVideoPlayer from "../../compoments/Player/Player";
 
-import "./Home.scss";
+import "./style.css";
 import exampleVideo from "../../assets/video/demo.mp4";
 import manrun from "../../assets/video/manrun.mp4";
 import manrunmobile from "../../assets/video/manrunmobile.mp4";

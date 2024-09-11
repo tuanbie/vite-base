@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import SVGComponent from "../Button/SendButton";
-
+import "./style.css";
 interface SearchComponentProps {
   onClose: () => void; // Hàm để đóng component
 }
@@ -18,8 +18,8 @@ const SearchComponent: React.FC<SearchComponentProps> = ({ onClose }) => {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full bg-white border-b border-gray-300 shadow-lg z-50">
-      <div className="relative flex items-center max-w-screen-lg mx-auto p-4">
+    <div className="fixed top-0 left-0 w-full bg-white border-b border-gray-300 shadow-lg z-50 h-24">
+      <div className="relative flex items-center max-w-screen-lg mx-auto p-4 mt-5">
         <button onClick={onClose} className="absolute top-3 left-3 m-3 text-gray-500 hover:text-gray-700">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -36,9 +36,9 @@ const SearchComponent: React.FC<SearchComponentProps> = ({ onClose }) => {
           placeholder="Search..."
           value={searchTerm}
           onChange={handleSearchChange}
-          className="pl-12 pr-4 py-2 border border-gray-300 rounded-md shadow-sm w-full"
+          className="pl-12 pr-4 py-2 rounded-3xl border border-gray-300 shadow-sm w-full "
         />
-        <button onClick={handleSearchSubmit} className="absolute right-3 text-gray-500 hover:text-gray-700">
+        <button onClick={handleSearchSubmit} className=" absolute right-7 text-gray-500 hover:text-gray-700">
           <SVGComponent />
         </button>
       </div>
