@@ -16,7 +16,7 @@
     "@material-tailwind/react": "^2.1.9",
     "@reacticons/ionicons": "^7.1.0",
     "@reduxjs/toolkit": "^2.2.5",
-    "antd": "^5.18.3",
+    "antd": "^5.20.6",
     "axios": "^1.7.2",
     "lucide-react": "^0.397.0",
     "npx": "^10.2.2",

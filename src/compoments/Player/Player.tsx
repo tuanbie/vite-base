@@ -55,24 +55,14 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({ src, autoPlay = t
       <div className="absolute bottom-0 left-0 right-0 flex justify-between m-8">
         <button onClick={handlePlayPause} className="text-white p-2 rounded">
           {isPlaying ? (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={24}
-              height={24}
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#000"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M6 4h4v16H6zm8 0h4v16h-4z" />
+            <svg width={24} height={24} viewBox="0 0 0.72 0.72" fill="#ffff" xmlns="http://www.w3.org/2000/svg">
+              <path d="M.3.12H.15V.6H.3zm.27 0H.42V.6h.15z" fill="#000" />
             </svg>
           ) : (
             <svg width={24} height={24} viewBox="0 0 0.72 0.72" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M.15.63V.09l.42.27z"
-                stroke="#000"
+                stroke="#ffff"
                 strokeWidth={0.06}
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -86,7 +76,7 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({ src, autoPlay = t
               <path
                 d="M.12.96V.6h.36l.54-.54v1.8l-.54-.54H.12ZM1.26.69l.54.54m-.54 0L1.8.69"
                 fill="none"
-                stroke="#000"
+                stroke="#ffff"
                 strokeWidth={0.06}
                 strokeMiterlimit={10}
               />

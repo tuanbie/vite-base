@@ -6,14 +6,16 @@ const Dropdown: React.FC<{
   isOpen: boolean;
   onClick: (id: string) => void;
   items: React.ReactNode;
-}> = ({ id, title, isOpen, onClick, items }) => {
+  style: string | "";
+  styleTitle: string | "";
+}> = ({ id, title, isOpen, onClick, items, style, styleTitle }) => {
   return (
     <div>
-      <button onClick={() => onClick(id)} className="py-4 font-normal text-sl">
+      <button onClick={() => onClick(id)} className={`py-4 font-normal text-sl ${styleTitle}`}>
         {title}
       </button>
-      <div className={`dropdown-content ${isOpen ? "open" : ""}`}>
-        <ul className="py-3 text-xs font-medium">{items}</ul>
+      <div className={`dropdown-content ${isOpen ? "open" : ""} ${style}`}>
+        <ul className="py-3 ">{items}</ul>
       </div>
     </div>
   );

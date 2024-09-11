@@ -80,7 +80,9 @@ function Footer() {
             id="dropdown1"
             title="Help"
             isOpen={isOpen === "dropdown1"}
+            styleTitle=""
             onClick={toggleDropdown}
+            style="text-xs font-medium"
             items={
               <>
                 <li className="pb-6">
@@ -98,6 +100,8 @@ function Footer() {
             id="dropdown2"
             title="Services"
             isOpen={isOpen === "dropdown2"}
+            styleTitle=""
+            style="text-xs font-medium"
             onClick={toggleDropdown}
             items={
               <>
@@ -112,6 +116,8 @@ function Footer() {
           <Dropdown
             id="dropdown3"
             title="About Louis Vuitton"
+            style="text-xs font-medium"
+            styleTitle=""
             isOpen={isOpen === "dropdown3"}
             onClick={toggleDropdown}
             items={
@@ -130,8 +136,10 @@ function Footer() {
           <Dropdown
             id="dropdown4"
             title="Email Sign-up"
+            style="text-xs font-medium"
             isOpen={isOpen === "dropdown4"}
             onClick={toggleDropdown}
+            styleTitle=""
             items={
               <>
                 <li>
