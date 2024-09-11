@@ -1,0 +1,11 @@
+.icon-search {
+  position: relative;
+  &:before {
+    position: absolute;
+    content: "";
+    top: 10%;
+    right: 0;
+    width: 2px;
+    background-color: #ccc;
+  }
+}

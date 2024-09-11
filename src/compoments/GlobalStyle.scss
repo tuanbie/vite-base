@@ -1,0 +1,66 @@
+// _variables.scss
+$primary-color: #3498db;
+$text-color: #fff;
+$header-height: 60px;
+$header-padding: 0 20px;
+
+// _header.scss
+@import "variables";
+
+header {
+  height: $header-height;
+  background-color: $primary-color;
+  color: $text-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $header-padding;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+
+      li {
+        margin-left: 20px;
+
+        a {
+          color: $text-color;
+          text-decoration: none;
+          font-size: 1rem;
+          transition: color 0.3s;
+
+          &:hover {
+            color: lighten($text-color, 20%);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: $header-padding;
+
+    nav ul {
+      flex-direction: column;
+      margin-top: 10px;
+
+      li {
+        margin: 10px 0;
+      }
+    }
+  }
+}
