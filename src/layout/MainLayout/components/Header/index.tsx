@@ -11,7 +11,7 @@ function Header() {
 
   return (
     <header className="fixed top-0 left-0 w-full text-white  z-50 shadow-md">
-      <div className="bg-white text-black  items-center justify-between  flex-1 relative grid grid-cols-3  h-20">
+      <div className="bg-white text-black  items-center justify-between  flex-1 relative grid grid-cols-3  h-24">
         <div className="pl-9">
           <div>
             <Button className="absolute">

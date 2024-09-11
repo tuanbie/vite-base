@@ -36,7 +36,10 @@ function Home() {
       <div className="md:hidden">
         <CustomVideoPlayer src={mobile} autoPlay={true} muted={true} />
       </div>
-      <div className="flex justify-center text-center py-24">
+      <div className=" justify-center text-center py-24 hidden md:flex">
+        <p className="system-ui font-normal text-2xl px-6">Explore a Selection of the Maison's Creations</p>
+      </div>
+      <div className="flex justify-center text-center py-14 md:hidden ">
         <p className="system-ui font-normal text-2xl px-6">Explore a Selection of the Maison's Creations</p>
       </div>
       <div className="hidden md:grid grid-cols-4 gap-4  percent-padding">

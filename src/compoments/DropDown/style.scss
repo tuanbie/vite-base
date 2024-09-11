@@ -1,0 +1,10 @@
+/* styles.css */
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.dropdown-content.open {
+  max-height: 200px; /* Đặt giá trị này lớn hơn để đảm bảo toàn bộ nội dung được hiển thị */
+}
