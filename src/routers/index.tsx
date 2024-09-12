@@ -3,7 +3,7 @@ import MainLayout from "../layout/MainLayout/MainLayout";
 // import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Home from "../pages/Home";
-import Product from "../pages/Product/product";
+import Product from "../pages/Product";
 
 const AppRoutes = () => {
   return (

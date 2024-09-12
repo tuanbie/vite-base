@@ -4,7 +4,7 @@ import aovest from "../../assets/images/aovest.png";
 const product = () => {
   return (
     <div>
-      <div className="flex sm:mt-[89px] mt-[55px] justify-between py-4 px-[3%] sticky top-[89px] bg-white">
+      <div className="flex sm:mt-[89px] mt-[55px] justify-between py-4 px-[3%] sticky sm:top-[89px] bg-white">
         <div>All product</div>
         <button className="bg-white h-8 w-20 border-[1px] border-black text-black rounded-full ">Filter</button>
       </div>
