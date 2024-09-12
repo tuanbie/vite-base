@@ -85,13 +85,15 @@ function Footer() {
             style="text-xs font-medium"
             items={
               <>
-                <li className="pb-6">
-                  You can <a className="underline underline-offset-4">call</a> or{" "}
-                  <a className="underline underline-offset-4">email us</a>.
-                </li>
-                <li className="py-3 pb-6">FAQ's</li>
-                <li className="py-3 pb-6">Product Care</li>
-                <li className="py-3">Stores</li>
+                <div className="pl-3">
+                  <li className="pb-6">
+                    You can <a className="underline underline-offset-4">call</a> or{" "}
+                    <a className="underline underline-offset-4">email us</a>.
+                  </li>
+                  <li className="py-3 pb-6">FAQ's</li>
+                  <li className="py-3 pb-6">Product Care</li>
+                  <li className="py-3">Stores</li>
+                </div>
               </>
             }
           />
@@ -105,10 +107,12 @@ function Footer() {
             onClick={toggleDropdown}
             items={
               <>
-                <li className="py-3">Repairs</li>
-                <li className="py-3">Personalization</li>
-                <li className="py-3">Air of Gifting</li>
-                <li className="py-3">Download</li>
+                <div className="pl-3">
+                  <li className="py-3">Repairs</li>
+                  <li className="py-3">Personalization</li>
+                  <li className="py-3">Air of Gifting</li>
+                  <li className="py-3">Download</li>
+                </div>
               </>
             }
           />
@@ -122,13 +126,15 @@ function Footer() {
             onClick={toggleDropdown}
             items={
               <>
-                <li className="py-3">Fashion Shows</li>
-                <li className="py-3">Arts & Culture</li>
-                <li className="py-3">La Maison</li>
-                <li className="py-3">Sustainability</li>
-                <li className="py-3">Latest News</li>
-                <li className="py-3">Careers</li>
-                <li className="py-3">Foundation Louis Vuitton</li>
+                <div className="pl-3">
+                  <li className="py-3">Fashion Shows</li>
+                  <li className="py-3">Arts & Culture</li>
+                  <li className="py-3">La Maison</li>
+                  <li className="py-3">Sustainability</li>
+                  <li className="py-3">Latest News</li>
+                  <li className="py-3">Careers</li>
+                  <li className="py-3">Foundation Louis Vuitton</li>
+                </div>
               </>
             }
           />
@@ -142,11 +148,13 @@ function Footer() {
             styleTitle=""
             items={
               <>
-                <li>
-                  <a className="underline underline-offset-4">Sign up</a> for Louis Vuitton emails and receive the
-                  latest news from the Maison, including exclusive online pre-launches and new collections
-                </li>
-                <li className="py-3">Follow Us</li>
+                <div className="pl-3">
+                  <li>
+                    <a className="underline underline-offset-4">Sign up</a> for Louis Vuitton emails and receive the
+                    latest news from the Maison, including exclusive online pre-launches and new collections
+                  </li>
+                  <li className="py-3">Follow Us</li>
+                </div>
               </>
             }
           />

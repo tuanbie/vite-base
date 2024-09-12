@@ -29,7 +29,7 @@ import personal from "../../assets/images/personal.png";
 
 function Home() {
   return (
-    <div className="relative mt-20 ">
+    <div className="relative ms:mt-20  mt-14">
       <div className="hidden md:flex">
         <CustomVideoPlayer src={exampleVideo} autoPlay={true} muted={true} />
       </div>
@@ -118,7 +118,7 @@ function Home() {
         <p className="Georgia font-normal text-sm px-6 py-1 underline underline-offset-4">Discover the Selection</p>
       </div>
 
-      <div className="h-screen -z-10 top-20 sticky">
+      <div className="-z-10 top-20 sticky">
         <div className="hidden md:flex">
           <img src={womenbagpc} className="mx-auto w-full"></img>
         </div>
@@ -171,7 +171,7 @@ function Home() {
         <p className="Georgia font-normal text-3xl px-6 py-4">27 Lovers</p>
         <p className="Georgia font-normal text-sm px-6 py-1 underline underline-offset-4">Discover the New Perfume</p>
       </div>
-      <div className="h-screen -z-10 top-20 sticky">
+      <div className="-z-10 top-20 sticky">
         <div className="hidden md:flex">
           <CustomVideoPlayer src={manrun} autoPlay={true} muted={true} />
         </div>

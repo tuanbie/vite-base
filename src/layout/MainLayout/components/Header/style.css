@@ -3,3 +3,13 @@
   text-decoration: none;
   color: black; /* Màu của liên kết, có thể thay đổi */
 }
+/* styles.css */
+.drawer-custom {
+  width: 33% !important; /* Mặc định cho các thiết bị không phải di động */
+}
+
+@media (max-width: 768px) {
+  .drawer-custom {
+    width: 66% !important; /* Chiều rộng cho thiết bị di động */
+  }
+}

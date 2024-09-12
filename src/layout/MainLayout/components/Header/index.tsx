@@ -5,13 +5,25 @@ import { Drawer } from "antd";
 import Dropdown from "../../../../compoments/DropDown/dropdown";
 import SearchComponent from "../../../../compoments/Input";
 import { CiMenuBurger, CiSearch, CiShoppingCart, CiUser } from "react-icons/ci";
+import "./style.css";
+import LoginForm from "../../../../compoments/Login/login";
+
 function Header() {
   const [open, setOpen] = useState(false);
+  const [openLogin, setOpenLogin] = useState(false);
   const [isOpen, setIsMenuOpen] = useState<string | null>(null);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const showDrawer = () => {
     setOpen(true);
+  };
+
+  const showDrawerLogin = () => {
+    setOpenLogin(true);
+  };
+
+  const onCloseLogin = () => {
+    setOpenLogin(false);
   };
 
   const showSearch = () => {
@@ -30,7 +42,7 @@ function Header() {
     setIsMenuOpen(isOpen === id ? null : id);
   };
   return (
-    <header className="fixed top-0 left-0 w-full z-50 shadow-sm ">
+    <header className="fixed top-0 left-0 w-full z-50  ">
       <div className=" bg-white sm:h-[89px] h-[55px] flex justify-between items-center px-9">
         <div className="flex gap-5">
           <div>
@@ -38,7 +50,7 @@ function Header() {
               <CiMenuBurger />
               <p className="ml-2 font-serif">Menu</p>
             </ButtonCustom>
-            <Drawer title="Close" placement={"left"} width="33%" onClose={onClose} open={open}>
+            <Drawer title="Close" placement={"left"} onClose={onClose} open={open}>
               <div className="px-14 pb-10">
                 <Dropdown
                   id="dropdown1"
@@ -49,10 +61,26 @@ function Header() {
                   style="text-base font-normal pl-4"
                   items={
                     <>
-                      <li className="py-3">Gifts for Her</li>
-                      <li className="py-3">Gifts for Him</li>
-                      <li className="py-3">Gifts for Baby</li>
-                      <li className="py-3">Personalization</li>
+                      <li>
+                        <a className="py-3" href="/product">
+                          Gifts for Her
+                        </a>
+                      </li>
+                      <li>
+                        <a className="py-3" href="/product">
+                          Gifts for Him
+                        </a>
+                      </li>
+                      <li>
+                        <a className="py-3" href="/product">
+                          Gifts for Baby
+                        </a>
+                      </li>
+                      <li>
+                        <a className="py-3" href="/product">
+                          Personalization
+                        </a>
+                      </li>
                     </>
                   }
                 />
@@ -122,8 +150,14 @@ function Header() {
               <p className="font-serif">Search</p>
             </ButtonCustom>
 
-            {isSearchOpen && <SearchComponent onClose={closeSearch} />}
-          </div>
+            {isSearchOpen && (
+              <SearchComponent
+                styleBg="left-0 w-full bg-white border-gray-300 shadow-lg z-50"
+                style=" mt-5  mx-auto p-4"
+                onClose={closeSearch}
+              />
+            )}
+          </div>{" "}
         </div>
 
         <Link to="/" className="">
@@ -132,12 +166,32 @@ function Header() {
 
         <div className="flex gap-5 ">
           <div className="hidden sm:flex">Call Us</div>
+          <ButtonCustom className="" onClick={showDrawerLogin}>
+            <CiUser className="text-xl " />
+          </ButtonCustom>
+          <Drawer width={800} title="Identification" placement={"right"} onClose={onCloseLogin} open={openLogin}>
+            <LoginForm />
+          </Drawer>
+          {/* {openLogin && (
+            <DrawerForm isOpen={openLogin}>
+              <LoginForm />
+            </DrawerForm>
+          )} */}
+          <CiShoppingCart className="text-xl hidden sm:flex" />
+          <div className=" sm:hidden">
+            <ButtonCustom className="" onClick={showSearch}>
+              <CiSearch className="text-xl" />
+            </ButtonCustom>
 
-          <CiShoppingCart className="text-xl" />
-          <CiUser className="text-xl" />
+            {isSearchOpen && (
+              <SearchComponent styleBg="left-0 mt-[55px] bg-white w-full " style="p-2  " onClose={closeSearch} />
+            )}
+          </div>
         </div>
       </div>
       <hr className=" border-t border-gray-300" />
+
+      {/* <hr className=" border-t border-gray-300" /> */}
     </header>
   );
 }
