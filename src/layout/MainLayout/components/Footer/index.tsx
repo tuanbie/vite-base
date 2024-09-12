@@ -14,7 +14,7 @@ function Footer() {
     <footer className="bg-white text-black bottom-0 ">
       <hr className=" border-t border-gray-300" />
 
-      <div className=" hidden md:grid grid-cols-4 gap-4 py-10 font-sans percent-padding">
+      <div className="hidden md:grid grid-cols-4 gap-4 py-10 font-sans percent-padding">
         <div>
           <div className="py-3 text-xs">Help</div>
           <ul className="py-3 text-xs font-medium">
