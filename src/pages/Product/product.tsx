@@ -1,4 +1,3 @@
-import React from "react";
 import mangreen from "../../assets/images/manvset.png";
 import aovest from "../../assets/images/aovest.png";
 
