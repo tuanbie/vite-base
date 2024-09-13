@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import SVGComponent from "../Button/SendButton";
 import "./style.css";
 import { IoClose } from "react-icons/io5";
 
@@ -35,7 +34,7 @@ const SearchComponent: React.FC<SearchComponentProps> = ({ onClose, style, style
           className="pl-12 pr-4 py-2 rounded-3xl border border-gray-300 shadow-sm w-full "
         />
         <button onClick={handleSearchSubmit} className=" absolute right-7 text-gray-500 hover:text-gray-700">
-          <SVGComponent />
+          {/* <SVGComponent /> */}
         </button>
       </div>
     </div>

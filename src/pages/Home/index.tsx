@@ -29,7 +29,9 @@ import personal from "../../assets/images/personal.png";
 
 function Home() {
   return (
-    <div className="relative ms:mt-20  mt-14">
+    <div className="relative sm:mt-20  mt-14">
+      <hr className=" border-t sticky z-20 sm:top-[89px] top-[54px]  border-gray-300" />
+
       <div className="hidden md:flex">
         <CustomVideoPlayer src={exampleVideo} autoPlay={true} muted={true} />
       </div>

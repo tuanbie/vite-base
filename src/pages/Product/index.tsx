@@ -3,7 +3,7 @@ import mangreenpc from "../../assets/images/mangreenpc.jpg";
 import aovest from "../../assets/images/aovest.png";
 import GridComponent from "../../compoments/ListProduct";
 
-const product = () => {
+const Product = () => {
   const data = [
     { id: 1, imgSrc: aovest, text: "aovest PM" },
     { id: 2, imgSrc: aovest, text: "aovest PM" },
@@ -16,7 +16,8 @@ const product = () => {
   ];
   return (
     <div>
-      <div className="flex sm:mt-[89px] mt-[55px] justify-between py-4 px-[3%] sticky sm:top-[89px] bg-white">
+      <hr className=" border-t sticky z-20 sm:top-[89px] top-[55px] border-gray-300 " />
+      <div className="flex sm:mt-[89px] top-[56px] mt-[55px] justify-between py-4 px-[3%] sticky sm:top-[89px] bg-white">
         <div>All product</div>
         <button className="bg-white h-8 w-20 border-[1px] border-black text-black rounded-full ">Filter</button>
       </div>
@@ -29,9 +30,9 @@ const product = () => {
         </div>
       </div>
       <div>
-        <GridComponent data={data} />
+        <GridComponent styleList="hidden sm:grid grid-cols-4 " data={data} />
+        <GridComponent styleList="grid grid-cols-2 sm:hidden" data={data} />
       </div>
-      <div className="grid grid-cols-2  "></div>
       <div className="items-center flex justify-center my-11">
         <button className="bg-white h-10 w-28 border-[1px] border-black text-black rounded-full ">Load More</button>
       </div>
@@ -39,4 +40,4 @@ const product = () => {
   );
 };
 
-export default product;
+export default Product;
